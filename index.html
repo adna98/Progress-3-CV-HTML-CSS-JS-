@@ -1,0 +1,231 @@
+<!DOCTYPEhtml>
+<html>
+<head>
+      
+    <title>CV</title>
+    
+        <meta charset="utf-8"/>
+        <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+        <link href="https://fonts.googleapis.com/css?family=Prociono&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Caveat&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Bad+Script&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Shadows+Into+Light+Two&display=swap" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="style.css">
+    
+</head>
+    <body>
+    <div id="title">
+        <div id="circle">
+        <h1>- CV -</h1>
+        </div>
+    </div>
+        <span id="open" class="openmodal"><button type="button" id="html">HTML</button></span>
+                <div id="simpleModal" class="modal">
+            <div class="modal-content">
+                <p>By clicking on this link, you will be able to see this page only in HTML.</p>
+                <a href="https://github.com/adna98/HTML-CSS-project-2/blob/main/projekat2HTML.html">Just HTML</a>
+                <span id="close" class="closebtn">Close</span>
+            </div>
+        </div>
+                
+        <span id="open2" class="openmodal"><button type="button" id="css">HTML+CSS</button></span>
+        <div id="simpleModal2" class="modal">
+            <div class="modal-content">
+                <p>By clicking on this link, you will be able to see this page in HTML+CSS.</p>
+                <a href="https://github.com/adna98/HTML-CSS-project-2/blob/main/projekat2CSS.css">HTML+CSS</a>
+                <span id="close2" class="closebtn">Close</span>
+            </div>
+        </div>
+        
+        <span id="open3" class="openModal"><button type="button" id="js">HTML+CSS+JS</button></span>
+        <div id="simpleModal3" class="modal">
+            <div class="modal-content">
+                <p>By clicking on this link, you will be able to see this page in HTML+CSS+JS.</p>
+                <a href="https://github.com/adna98/HTML-CSS-project-2/blob/main/projekat2CSS.css">HTML+CSS+JS</a>
+                <span id="close3" class="closebtn">Close</span>
+            </div>
+        </div>
+        
+         <div id="str"></div>
+        <div id="personalinfo">
+            <h2>Adna Beganovic</h2>
+            <div id="m">
+                 
+        <i><b>mail</b></i> adna.98@hotmail.com
+            </div>
+            <div id="p">
+                 
+            <i><b>phone</b></i>062/895-443
+            </div>
+            <div id="h"
+            <p> <i><b>address </b></i> Bana Borića 61, 71000 Sarajevo</p>
+            <div class="container">
+                <img id="photo" src="131390615_146289440284471_5831658768280537908_n.JPG">
+                <div class="middle">
+            </div>
+           
+        </div>
+            
+        
+        
+        <div class="experience">
+            <button type="button" class="collapsible"><p><strong>WORK EXPERIENCE</strong></p></button>
+            <div class="content">
+            <dl>
+            <dt1>[09.2020- 10.2020]</dt1>
+                <dd1>STEP d.d. Sarajevo <i>Internship</i></dd1>
+            </dl>
+            </div>
+        </div>
+        
+        <div id="education"> 
+            <button type="button" class="collapsible"><label>EDUCATION</label></button>
+            <div class="content">
+            <dl>
+            <dt1>[2012-2016]</dt1>
+                <dd1>Gazi Husrev-begova medresa, Sarajevo</dd1>
+            <dt2>[2016-2020]</dt2>
+                <dd2>International University of Sarajevo, Electrical Engineering and Electronics</dd2>
+            </dl>
+            </div>
+        </div>
+            
+        <div id="skills">
+            <button type="button" class="collapsible"><dl>PERSONAL SKILLS</dl></button>
+                <div class="content">
+                <dt1>Mother tongue(s)</dt1>
+                    <dd1>Bosnian</dd1>
+                    <div>
+                <dt2>Other Languages</dt2></div>
+                    <dd2><table>
+                <tr>
+                    <th colspan="5">UNDERSTANDING  SPEAKING  WRITING</th>
+                </tr>
+                <tr>
+                    <td><b>Language</b></td>
+                    <td><b>Listening</b></td>
+                    <td><b>Reading</b></td>
+                    <td><b>Spoken interaction</b></td>
+                    <td><b>Spoken production</b></td>
+                </tr>
+                <tr>
+                    <td><b>English</b></td>
+                    <td>C2</td>
+                    <td>C2</td>
+                    <td>C2</td>
+                    <td>C2</td>
+                </tr>
+                    <td><b>Turkish</b></td>
+                    <td>A2</td>
+                    <td>A2</td>
+                    <td>A2</td>
+                    <td>A2</td>
+                </table></dd2>
+            
+            <div id="communication">
+            <p>Communication Skills</p>
+            <ul>
+                <li>I would describe myself as a great team player who is committed to adding value to the workplace through effective communication and listening skills.</li>
+                <li id="li1">I have developed strong communication skills, and I’m able to clearly convey points to different audiences. I’m also a good listener which aids in my ability to intimately understand a situation and prepare an appropriate response. I believe that my strong organizational skills will also be an asset in this role</li>
+            </ul>
+            </div>
+            </div>
+            </div>
+        
+        <script>
+        
+           
+            var string="Welcome!";
+            var str=string.split("");
+            
+            var el=document.getElementById("str");
+            
+            (function animate(){
+                    
+                
+                str.length>0?el.innerHTML+=str.shift():
+                clearTimeout(running);
+                var running=setTimeout(animate, 90);
+        
+            })();
+            
+            
+            var coll=document.getElementsByClassName("collapsible");
+            var i;
+            
+            for (i=0; i<coll.length; i++)
+                {
+                   coll[i].addEventListener("click", function() {
+                        this.classList.toggle("active");
+                        var content = this.nextElementSibling;
+                            if (content.style.display === "block") {
+                                content.style.display = "none";
+                            } else {
+                                content.style.display = "block";
+                            }
+                    }); 
+                    
+                }
+            
+            var modal=document.getElementById('simpleModal');
+            var openmodal=document.getElementById('open');
+            var closebtn=document.getElementById('close');
+            
+            openmodal.addEventListener('click', openModal);
+            closebtn.addEventListener('click', closeModal);
+            
+            function openModal() {
+    
+                modal.style.display='block';
+    
+                }
+
+            function closeModal() {
+    
+                modal.style.display='none';
+                
+                }
+            
+            
+            var modal2=document.getElementById('simpleModal2');
+            var openmodal2=document.getElementById('open2');
+            var closebtn2=document.getElementById('close2');
+            
+            openmodal2.addEventListener('click', openModal2);
+            closebtn2.addEventListener('click', closeModal2);
+            
+            function openModal2() {
+    
+                modal2.style.display='block';
+    
+                }
+
+            function closeModal2() {
+    
+                modal2.style.display='none';
+                
+                }
+            
+            
+            var modal3=document.getElementById('simpleModal3');
+            var openmodal3=document.getElementById('open3');
+            var closebtn3=document.getElementById('close3');
+            
+            openmodal3.addEventListener('click', openModal3);
+            closebtn3.addEventListener('click', closeModal3);
+            
+            function openModal3() {
+    
+                modal3.style.display='block';
+    
+                }
+
+            function closeModal3() {
+    
+                modal3.style.display='none';
+                
+                }
+            
+        </script>
+    
+</body>
